@@ -1,0 +1,4 @@
+Contact: mailto:inu@8b.is
+Expires: 2027-12-31T00:00:00.000Z
+Preferred-Languages: ja, en, zh
+Canonical: https://inu.vaked.dev/.well-known/security.txt

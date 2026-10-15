@@ -1,0 +1,22 @@
+# inu.vaked.dev — 犬 · 猫 · 馬
+
+> A neighbourhood animal-care service by Peter Lodri: dog walking, cat visits
+> and horse care. Japanese (default), English and 中文. Book by QR code or by
+> email to inu@8b.is.
+
+## Services
+- Dog walking (犬) — 30–60 min, double-clipped leads, photo + note every walk.
+- Cat visits (猫) — 30 min, food/water/litter and company.
+- Horse care (馬) — stable visits, brushing, hand-walking.
+
+## Pricing (JPY)
+- Solo walk, one dog — from ¥1,200 (30 min) / ¥2,000 (60 min)
+- Pack walk, 2–3 dogs — from ¥1,500 for the first dog, ¥900 each extra
+- Cat visit — from ¥1,500 · Horse care — from ¥4,500 (60 min)
+- Monthly pass — 20 walks ¥18,000
+- First meet & greet is free.
+
+## Contact
+- Email: inu@8b.is
+- QR: https://inu.vaked.dev/assets/qr.svg (scans to a prefilled email)
+- Languages: 日本語 · English · 中文

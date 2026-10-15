@@ -1,0 +1,7 @@
+node_modules/
+scripts/
+.git/
+.gitignore
+package.json
+pnpm-lock.yaml
+assets/STYLE.md

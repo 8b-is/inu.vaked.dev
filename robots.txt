@@ -1,0 +1,17 @@
+# inu.vaked.dev — a small neighbourhood service, not a training set.
+User-agent: GPTBot
+Disallow: /
+User-agent: ClaudeBot
+Disallow: /
+User-agent: CCBot
+Disallow: /
+User-agent: Google-Extended
+Disallow: /
+User-agent: PerplexityBot
+Disallow: /
+User-agent: Bytespider
+Disallow: /
+User-agent: *
+Allow: /
+
+Sitemap: https://inu.vaked.dev/sitemap.xml

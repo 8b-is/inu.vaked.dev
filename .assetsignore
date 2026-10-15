@@ -5,3 +5,4 @@ scripts/
 package.json
 pnpm-lock.yaml
 assets/STYLE.md
+README.md

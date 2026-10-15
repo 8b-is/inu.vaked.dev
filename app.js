@@ -261,7 +261,9 @@ function apply(lang) {
   } catch {}
 
   document.querySelectorAll("[data-lang-btn]").forEach((b) => {
-    b.classList.toggle("active", b.dataset.langBtn === lang);
+    const on = b.dataset.langBtn === lang;
+    b.classList.toggle("active", on);
+    b.setAttribute("aria-pressed", String(on));
   });
 
   set("brand-sub", d.brandSub);

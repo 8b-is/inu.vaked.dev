@@ -1,164 +1,294 @@
 <!doctype html>
-<html lang="ja" data-theme="zeno">
+<html lang="ja">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>inu.vaked.dev — 犬 · 猫 · 馬 | おさんぽサービス by Peter Lodri</title>
+    <title>inu.vaked.dev — 犬・猫・馬 | おさんぽサービス by Peter Lodri</title>
     <meta
       name="description"
       content="犬の散歩、猫の世話、馬の手入れ。日本語・English・中文対応。QRコードで予約、inu@8b.is まで。A neighbourhood animal-care service by Peter Lodri."
     />
     <meta name="theme-color" content="#070312" />
+    <link rel="canonical" href="https://inu.vaked.dev/" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="inu.vaked.dev — 犬 · 猫 · 馬" />
+    <meta property="og:url" content="https://inu.vaked.dev/" />
+    <meta property="og:site_name" content="inu.vaked.dev" />
+    <meta property="og:title" content="inu.vaked.dev — 犬・猫・馬" />
     <meta
       property="og:description"
-      content="Dog walking, cat visits, horse care. 日本語 · English · 中文. Book by QR or inu@8b.is."
+      content="犬の散歩、猫の世話、馬の手入れ。日本語・English・中文。QRコードで予約、inu@8b.is まで。"
     />
-    <meta property="og:image" content="/assets/hero.svg" />
+    <meta property="og:image" content="https://inu.vaked.dev/assets/hero.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="alternate" hreflang="ja" href="https://inu.vaked.dev/?lang=ja" />
+    <link rel="alternate" hreflang="en" href="https://inu.vaked.dev/?lang=en" />
+    <link rel="alternate" hreflang="zh-Hans" href="https://inu.vaked.dev/?lang=zh" />
     <link rel="stylesheet" href="/styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "inu.vaked.dev — 犬・猫・馬",
+        "description": "Dog walking, cat visits and horse care by Peter Lodri. 日本語 · English · 中文.",
+        "url": "https://inu.vaked.dev/",
+        "image": "https://inu.vaked.dev/assets/hero.svg",
+        "email": "inu@8b.is",
+        "founder": { "@type": "Person", "name": "Peter Lodri" },
+        "areaServed": "Tokyo",
+        "availableLanguage": ["ja", "en", "zh"],
+        "makesOffer": [
+          {
+            "@type": "Offer",
+            "name": "Solo dog walk (30 min)",
+            "price": "1200",
+            "priceCurrency": "JPY",
+            "itemOffered": { "@type": "Service", "serviceType": "Dog walking" }
+          },
+          {
+            "@type": "Offer",
+            "name": "Solo dog walk (60 min)",
+            "price": "2000",
+            "priceCurrency": "JPY",
+            "itemOffered": { "@type": "Service", "serviceType": "Dog walking" }
+          },
+          {
+            "@type": "Offer",
+            "name": "Pack walk (60 min, first dog)",
+            "price": "1500",
+            "priceCurrency": "JPY",
+            "itemOffered": { "@type": "Service", "serviceType": "Dog walking" }
+          },
+          {
+            "@type": "Offer",
+            "name": "Cat visit (30 min)",
+            "price": "1500",
+            "priceCurrency": "JPY",
+            "itemOffered": { "@type": "Service", "serviceType": "Pet sitting" }
+          },
+          {
+            "@type": "Offer",
+            "name": "Horse care (60 min)",
+            "price": "4500",
+            "priceCurrency": "JPY",
+            "itemOffered": { "@type": "Service", "serviceType": "Horse care" }
+          },
+          {
+            "@type": "Offer",
+            "name": "Monthly pass — 20 walks",
+            "price": "18000",
+            "priceCurrency": "JPY",
+            "itemOffered": { "@type": "Service", "serviceType": "Dog walking" }
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <header class="site-header">
       <a class="brand" href="/">
-        <span class="brand-kanji">犬</span>
-        <span class="brand-words"><b>inu</b>.vaked.dev<small id="brand-sub"></small></span>
+        <span class="brand-kanji" aria-hidden="true">犬</span>
+        <span class="brand-words"><b>inu</b>.vaked.dev<small id="brand-sub">おさんぽサービス</small></span>
       </a>
-      <div class="langs" role="group" aria-label="Language">
-        <button type="button" data-lang-btn="ja" class="active">日本語</button>
-        <button type="button" data-lang-btn="en">English</button>
-        <button type="button" data-lang-btn="zh">中文</button>
-      </div>
+      <nav class="langs" aria-label="言語 / Language">
+        <button type="button" data-lang-btn="ja" class="active" aria-pressed="true">日本語</button>
+        <button type="button" data-lang-btn="en" aria-pressed="false">English</button>
+        <button type="button" data-lang-btn="zh" aria-pressed="false">中文</button>
+      </nav>
     </header>
 
     <main>
       <section class="hero">
         <div class="hero-copy">
-          <p class="kicker" id="hero-kicker"></p>
-          <h1 id="hero-title"></h1>
-          <p class="lede" id="hero-lede"></p>
+          <p class="kicker" id="hero-kicker">犬 · 猫 · 馬 · 東京</p>
+          <h1 id="hero-title">いぬの おさんぽ、まかせて。</h1>
+          <p class="lede" id="hero-lede">
+            犬の散歩、猫の世話、馬の手入れ。近所を、あたたかく、ていねいに。雨の日も、毎日でも。
+          </p>
           <div class="hero-actions">
-            <a class="btn sun" href="#book" id="hero-cta"></a>
+            <a class="btn sun" href="#book" id="hero-cta">QRで予約する</a>
             <a class="btn ghost" href="mailto:inu@8b.is">inu@8b.is</a>
           </div>
-          <ul class="badges" id="hero-badges"></ul>
+          <ul class="badges" id="hero-badges">
+            <li>日本語 · English · 中文</li>
+            <li>初回の ふれあい は無料</li>
+            <li>雨の日も お伺いします</li>
+          </ul>
         </div>
         <div class="hero-art">
-          <img src="/assets/hero.svg" alt="犬・猫・馬 walking against a golden sun" width="1600" height="900" />
+          <img
+            src="/assets/hero.svg"
+            alt="犬・猫・馬 — a dog, a cat and a horse silhouetted against a golden sun"
+            width="1600"
+            height="900"
+          />
         </div>
       </section>
 
       <section class="section" id="services">
-        <p class="kicker" id="svc-kicker"></p>
-        <h2 id="svc-title"></h2>
+        <p class="kicker" id="svc-kicker">サービス</p>
+        <h2 id="svc-title">三つの足あと</h2>
         <div class="cards">
           <article class="card sun">
-            <div class="glyph">犬</div>
-            <h3 id="svc1-t"></h3>
-            <p id="svc1-d"></p>
-            <p class="meta" id="svc1-m"></p>
+            <div class="glyph" aria-hidden="true">犬</div>
+            <h3 id="svc1-t">犬の散歩</h3>
+            <p id="svc1-d">元気いっぱいの子も、ゆっくりの子も。リードは二重に、帰りに写真とメモを送ります。</p>
+            <p class="meta" id="svc1-m">30〜60分 · 1頭から</p>
           </article>
           <article class="card nebula">
-            <div class="glyph">猫</div>
-            <h3 id="svc2-t"></h3>
-            <p id="svc2-d"></p>
-            <p class="meta" id="svc2-m"></p>
+            <div class="glyph" aria-hidden="true">猫</div>
+            <h3 id="svc2-t">猫の世話</h3>
+            <p id="svc2-d">ごはん、水、トイレ、そして そばにいる時間。留守中の安心を預かります。</p>
+            <p class="meta" id="svc2-m">1回30分 · 写真報告つき</p>
           </article>
           <article class="card saiyan">
-            <div class="glyph">馬</div>
-            <h3 id="svc3-t"></h3>
-            <p id="svc3-d"></p>
-            <p class="meta" id="svc3-m"></p>
+            <div class="glyph" aria-hidden="true">馬</div>
+            <h3 id="svc3-t">馬の手入れ</h3>
+            <p id="svc3-d">厩舎訪問、ブラッシング、引き馬。大きな友だちにも、ていねいに。</p>
+            <p class="meta" id="svc3-m">60分〜 · 要相談</p>
           </article>
         </div>
       </section>
 
       <section class="section" id="pricing">
-        <p class="kicker" id="price-kicker"></p>
-        <h2 id="price-title"></h2>
-        <p class="section-lede" id="price-lede"></p>
+        <p class="kicker" id="price-kicker">料金</p>
+        <h2 id="price-title">はっきりした、やさしい値段</h2>
+        <p class="section-lede" id="price-lede">
+          追加料金は かならず事前にご相談。はじめての ふれあい（顔合わせ）は無料です。
+        </p>
         <div class="plans">
           <article class="plan">
-            <h3 id="plan1-t"></h3>
-            <p class="price"><span id="plan1-p"></span><small id="plan1-u"></small></p>
-            <ul id="plan1-l"></ul>
-            <a class="btn ghost" href="#book" id="plan1-a"></a>
+            <h3 id="plan1-t">ソロさんぽ（1頭）</h3>
+            <p class="price"><span id="plan1-p">¥1,200</span><small id="plan1-u">〜 / 30分</small></p>
+            <ul id="plan1-l">
+              <li>30分 ¥1,200</li>
+              <li>60分 ¥2,000</li>
+              <li>写真＋メモの報告</li>
+              <li>リード二重がけ</li>
+            </ul>
+            <a class="btn ghost" href="#book" id="plan1-a">これにする</a>
           </article>
           <article class="plan featured">
-            <span class="ribbon" id="plan2-ribbon"></span>
-            <h3 id="plan2-t"></h3>
-            <p class="price"><span id="plan2-p"></span><small id="plan2-u"></small></p>
-            <ul id="plan2-l"></ul>
-            <a class="btn sun" href="#book" id="plan2-a"></a>
+            <span class="ribbon" id="plan2-ribbon">いちばん人気</span>
+            <h3 id="plan2-t">パックさんぽ（2〜3頭）</h3>
+            <p class="price"><span id="plan2-p">¥1,500</span><small id="plan2-u">〜 / 1頭・60分</small></p>
+            <ul id="plan2-l">
+              <li>1頭目 ¥1,500</li>
+              <li>2頭目から ¥900</li>
+              <li>一緒に歩くと社会性アップ</li>
+              <li>週5回のおまとめ割あり</li>
+            </ul>
+            <a class="btn sun" href="#book" id="plan2-a">予約する</a>
           </article>
           <article class="plan">
-            <h3 id="plan3-t"></h3>
-            <p class="price"><span id="plan3-p"></span><small id="plan3-u"></small></p>
-            <ul id="plan3-l"></ul>
-            <a class="btn ghost" href="#book" id="plan3-a"></a>
+            <h3 id="plan3-t">ねこ・うま 訪問</h3>
+            <p class="price"><span id="plan3-p">¥1,500</span><small id="plan3-u">〜 / 1回</small></p>
+            <ul id="plan3-l">
+              <li>猫 30分 ¥1,500</li>
+              <li>馬 60分 ¥4,500</li>
+              <li>鍵のお預かりOK</li>
+              <li>写真＋動画の報告</li>
+            </ul>
+            <a class="btn ghost" href="#book" id="plan3-a">相談する</a>
           </article>
         </div>
         <details class="addons">
-          <summary id="addons-sum"></summary>
-          <ul id="addons-list"></ul>
+          <summary id="addons-sum">追加オプション（クリックで開く）</summary>
+          <ul id="addons-list">
+            <li>月末パス 20回 ¥18,000（10%お得）</li>
+            <li>土日・祝日 +¥300</li>
+            <li>早朝（6時前）・深夜 +¥400</li>
+            <li>シャンプー +¥1,200</li>
+            <li>動物病院の付き添い ¥2,000</li>
+            <li>雨の日は室内訪問、または 50% off</li>
+          </ul>
         </details>
       </section>
 
       <section class="section" id="how">
-        <p class="kicker" id="how-kicker"></p>
-        <h2 id="how-title"></h2>
-        <ol class="steps" id="how-steps"></ol>
+        <p class="kicker" id="how-kicker">つかいかた</p>
+        <h2 id="how-title">3ステップ</h2>
+        <ol class="steps" id="how-steps">
+          <li>
+            <b>QRを読みとる</b>
+            <span>スマホのカメラでQRコードを読み、メールを送るだけ。日本語・English・中文OK。</span>
+          </li>
+          <li>
+            <b>ふれあい（無料）</b>
+            <span>おうちと、わんちゃん・ねこちゃん・うまに ごあいさつ。ルートと時間を相談します。</span>
+          </li>
+          <li>
+            <b>おさんぽ開始</b>
+            <span>毎回 写真とメモをおくります。お預かりした鍵は お約束どおり 大切に。</span>
+          </li>
+        </ol>
       </section>
 
       <section class="section" id="animals">
-        <p class="kicker" id="an-kicker"></p>
-        <h2 id="an-title"></h2>
-        <p class="section-lede" id="an-lede"></p>
+        <p class="kicker" id="an-kicker">ずかん · field guide</p>
+        <h2 id="an-title">どうぶつの なまえ</h2>
+        <p class="section-lede" id="an-lede">
+          73の どうぶつ。ひらがな・ローマ字・English・中文で さがせます。
+        </p>
         <div class="an-controls">
           <label class="an-search">
-            <span class="sr-only">search animals</span>
-            <input id="an-q" type="search" autocomplete="off" />
+            <span class="sr-only">どうぶつの なまえで さがす</span>
+            <input id="an-q" type="search" autocomplete="off" placeholder="なまえで さがす…" />
           </label>
-          <div class="an-filters" id="an-filters" role="group" aria-label="Animal groups"></div>
-          <p class="an-count" id="an-count"></p>
+          <div class="an-filters" id="an-filters" role="group" aria-label="どうぶつの グループ"></div>
+          <p class="an-count" id="an-count" aria-live="polite"></p>
         </div>
         <div class="an-grid" id="an-grid"></div>
+        <noscript>
+          <p class="section-lede">
+            ずかんの 検索には JavaScript が ひつようです。犬・猫・馬の ご予約は QRコード か
+            <a href="mailto:inu@8b.is">inu@8b.is</a> へ どうぞ。
+          </p>
+        </noscript>
       </section>
 
       <section class="section book" id="book">
         <div class="book-copy">
-          <p class="kicker" id="book-kicker"></p>
-          <h2 id="book-title"></h2>
-          <p class="section-lede" id="book-lede"></p>
+          <p class="kicker" id="book-kicker">予約</p>
+          <h2 id="book-title">さあ、さんぽへ。</h2>
+          <p class="section-lede" id="book-lede">
+            QRを読みとるか、inu@8b.is へメールしてください。24時間以内に返信します。
+          </p>
           <div class="book-actions">
-            <a class="btn sun" id="book-mail" href="mailto:inu@8b.is"></a>
-            <a class="btn ghost" id="book-map" href="https://8b.vaked.dev" hidden></a>
+            <a
+              class="btn sun"
+              id="book-mail"
+              href="mailto:inu@8b.is?subject=%E3%81%8A%E3%81%95%E3%82%93%E3%81%BD%E4%BA%88%E7%B4%84%20%2F%20Dog%20walk%20booking"
+              >メールで予約する</a
+            >
           </div>
           <dl class="facts">
-            <div><dt id="fact1-k"></dt><dd id="fact1-v"></dd></div>
-            <div><dt id="fact2-k"></dt><dd id="fact2-v"></dd></div>
-            <div><dt id="fact3-k"></dt><dd id="fact3-v"></dd></div>
+            <div><dt id="fact1-k">対応</dt><dd id="fact1-v">犬 · 猫 · 馬（その他の子もご相談）</dd></div>
+            <div><dt id="fact2-k">言語</dt><dd id="fact2-v">日本語 · English · 中文</dd></div>
+            <div><dt id="fact3-k">連絡</dt><dd id="fact3-v">inu@8b.is · 24時間以内に返信</dd></div>
           </dl>
         </div>
         <figure class="qr">
-          <img src="/assets/qr.svg" alt="QR code — scan to email inu@8b.is" width="320" height="320" />
-          <figcaption id="qr-cap"></figcaption>
+          <img
+            src="/assets/qr.svg"
+            alt="QRコード — 読みとると inu@8b.is へのメールが開きます"
+            width="320"
+            height="320"
+          />
+          <figcaption id="qr-cap">スマホのカメラで読みとってください</figcaption>
         </figure>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div>
-        <b>犬 · 猫 · 馬</b> — <span id="foot-line"></span>
-      </div>
+      <div><b>犬 · 猫 · 馬</b> — <span id="foot-line">a neighbourhood animal-care service by Peter Lodri</span></div>
       <div class="foot-links">
         <a href="mailto:inu@8b.is">inu@8b.is</a>
         <a href="https://8b.vaked.dev">8b.vaked.dev</a>
         <a href="https://pocoo.vaked.dev">pocoo</a>
-        <a href="https://github.com/8b-is">github</a>
+        <a href="https://github.com/8b-is/inu.vaked.dev">github</a>
       </div>
-      <p id="foot-note"></p>
+      <p id="foot-note">犬 · 猫 · 馬 · made with love for mom &amp; dad · 8b.is</p>
     </footer>
 
     <script type="module" src="/app.js"></script>

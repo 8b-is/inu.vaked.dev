@@ -1,0 +1,6 @@
+.git
+scripts
+node_modules
+.wrangler
+README.md
+assets/STYLE.md

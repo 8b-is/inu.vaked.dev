@@ -137,6 +137,20 @@ wrangler pages deploy . --project-name inu-vaked-dev --branch main
 `node_modules/`, `scripts/` and the repo docs are excluded from the upload by
 [`.assetsignore`](./.assetsignore).
 
+### or serve it from a container host
+
+The repo also carries a [`Dockerfile`](./Dockerfile) (nginx + the static files,
+no build step) so the same site can run on the Hetzner/Coolify box beside 8b.is:
+
+```bash
+docker build -t inu-vaked-dev .
+docker run -d -p 3001:80 --name inu-vaked-dev inu-vaked-dev
+```
+
+In Coolify: **New Resource → Dockerfile** on `8b-is/inu.vaked.dev`, set the
+domain to `inu.vaked.dev`, expose port `80`. The Pages deployment and this one
+serve identical files.
+
 > **Custom domain:** the project is `inu-vaked-dev` and the domain
 > `inu.vaked.dev` is attached to it. If it sits at *initializing*, the `inu`
 > CNAME (`inu` → `inu-vaked-dev.pages.dev`, proxied) still needs creating in
